@@ -32,7 +32,7 @@ def find_user(name):
 #Busca de task
 def find_task(id, name):
     for task in tasks:
-        if task["id"] == id and task["name"] == name:
+        if task["id"] == str(id) and task["name"] == name:
             return task
     return None
 
@@ -61,7 +61,7 @@ def login():
     
     user = find_user(name)
     if user and user["password"] == password:
-        access_token = create_access_token(identity=name, expires_delta=timedelta(minutes=20))
+        access_token = create_access_token(identity=name, expires_delta=timedelta(minutes=120))
         return jsonify({"access_token": access_token}), 200
     return jsonify({"message": "Credenciais inválidas"}), 401
 
@@ -77,8 +77,8 @@ def add_task():
     new_task = {
         "id": str(uuid.uuid4()),
         "name": current_user,
-        "title": data.get('title'),
-        "description": data.get('description'),
+        "title": data.get("title"),
+        "description": data.get("description"),
         "deadline": datetime.strptime(data.get("deadline"), "%Y-%m-%d %H:%M:%S"),
         "done": False,
     }
@@ -94,7 +94,7 @@ def obter_tasks():
     return jsonify(user_tasks), 200
 
 #consultar(id)
-@app.route('/tasks/<int:id>', methods=['GET'])
+@app.route('/tasks/<id>', methods=['GET'])
 @jwt_required()
 def obter_task_por_id(id):
     current_user = get_jwt_identity()
@@ -104,7 +104,7 @@ def obter_task_por_id(id):
     return jsonify({"message": "Tarefa não encontrada"}), 404
 
 #editar
-@app.route('/tasks/<int:id>', methods=['PUT'])
+@app.route('/tasks/<id>', methods=['PUT'])
 @jwt_required()
 def editar_task(id):
     current_user = get_jwt_identity()
@@ -113,13 +113,13 @@ def editar_task(id):
         return jsonify({"message": "Tarefa não encontrada"}), 404
     
     data = request.json
-    tasks["title"] = data.get("title", task["title"])
-    tasks["description"] = data.get("description", task["description"])
-    tasks["deadline"] = datetime.strptime(data.get("deadline"), "%Y-%m-%d %H:%M:%S")
+    task["title"] = data.get("title", task["title"])
+    task["description"] = data.get("description", task["description"])
+    task["deadline"] = datetime.strptime(data.get("deadline"), "%Y-%m-%d %H:%M:%S")
     return jsonify({"message": "Tarefa atualizada com sucesso", "task": task}), 200
 
 #marcar como feito
-@app.route('/tasks/<int:id>/done', methods=['PUT'])
+@app.route('/tasks/<id>/done', methods=['PUT'])
 @jwt_required()
 def mark_done(id):
     current_user = get_jwt_identity()
@@ -130,7 +130,7 @@ def mark_done(id):
     return jsonify({"message": "Tarefa marcada como feita", "task": task}), 200
 
 #excluir
-@app.route('/tasks/<int:id>', methods=['DELETE'])
+@app.route('/tasks/<id>', methods=['DELETE'])
 @jwt_required()
 def delete_task(id):
     current_user = get_jwt_identity()
@@ -148,7 +148,7 @@ def get_notifications():
     notifications = [
         task
         for task in tasks
-        if task["name"] == current_user and task["done"] and (task["deadline"] - datetime.now()).days <= 1
+        if task["name"] == current_user and not task["done"] and 0 <= (task["deadline"] - datetime.now()).days <= 3
     ]
     return jsonify(notifications), 200
 
