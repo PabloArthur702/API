@@ -24,13 +24,6 @@ Autores:
 
 ---
 
-## **Pré-requisitos**
-Antes de iniciar, certifique-se de ter o seguinte instalado:
-- **Python 3.10+**  
-- **Docker** 
-
----
-
 ## **Funcionalidades principais**
 1. **Cadastro de tarefas:** Crie tarefas informando título e descrição.  
 2. **Listagem de tarefas:** Liste todas as tarefas cadastradas, filtrando por status (pendente/concluído).  
