@@ -122,9 +122,9 @@ Descrição: Atualiza os detalhes de uma tarefa específica.
 Requisição:
 ```bash
 {
-    "title": "Estudar para prova final",
-    "description": "Revisar álgebra e trigonometria",
-    "deadline": "2024-12-11 18:00:00"
+    "title": "Estudar para prova",
+    "description": "Estrutura de Dados I, Banco de Dados e Engenharia de Software",
+    "deadline": "08/12/2024 08:50:00"
 }
 ```
 Respostas:
