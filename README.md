@@ -103,7 +103,7 @@ Respostas:
 Endpoint: /tasks
 Método: GET
 Autenticação: Requer JWT.
-Descrição: Retorna todas as tarefas do usuário autenticado.
+Descrição: Retorna todas as tarefas do usuário autenticado.  
 Respostas:
 200: Lista de tarefas do usuário.
 ### **3. Consultar Tarefa por ID**
