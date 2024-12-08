@@ -47,13 +47,15 @@ docker run -p 5000:5000 -it api-gerenciamento-tarefas
 ### **Passo 5: Uso da API**
 Após a execução do container, os endpoints da API estarão disponíveis no servidor **http://localhost:5000/**, permitindo a realização de operações utilizando os métodos para o CRUD. Esses métodos podem ser utilizados para interagir com os recursos da API, como cadastrar, listar, atualizar e excluir tarefas. Certifique-se de incluir o token JWT no cabeçalho das requisições para acessar os endpoints protegidos.
 
+---
+
+## **Comandos de autenticação:**
 
 ### **1. Registro de Usuário**
 Endpoint: /register
 Método: POST
 Descrição: Registra um novo usuário.
 Requisição:
-json
 ```bash
 {
     "name": "João",
@@ -78,6 +80,11 @@ Respostas:
 200: Retorna o token de acesso.
 401: Credenciais inválidas.
 Tarefas
+
+---
+
+## **comandos de implantação:**
+
 ### **1. Adicionar Tarefa**
 Endpoint: /tasks
 Método: POST
