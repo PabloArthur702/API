@@ -52,16 +52,14 @@ Após a execução do container, os endpoints da API estarão disponíveis no se
 ## **Comandos de autenticação:**
 
 ### **1. Registro de Usuário**
-Endpoint: /register
-Método: POST
-Descrição: Registra um novo usuário.
-Requisição:
+Abrindo o postman cole a URL fornecida e atribua no final a rota desejada, como por exemplo, "/register", selecione o método "POST". Mude para "Body", selecione "raw" e depois modifique "Text" para "JSON". Adicione dentro do campo a seguinte requisição:
 ```bash
 {
     "name": "João",
     "password": "1234"
 }
 ```
+Depois clique em "Send".  
 Respostas:
 201: Usuário cadastrado com sucesso.
 400: Usuário já existe.
