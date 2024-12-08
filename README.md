@@ -6,13 +6,13 @@ Este é um projeto de gerenciamento de tarefas desenvolvido para máteria DCA360
 
 ## **Links importantes**
 - **Histórias de usuário:**  
-  [Documentação no Google Docs](https://docs.google.com/document/d/1RviuKOJmK7BWzfPhResA2neH622yShreo7fcHMqRnhw/edit?usp=sharing)  
+  [Clique aqui para Histórias de usuário]([https://docs.google.com/document/d/1RviuKOJmK7BWzfPhResA2neH622yShreo7fcHMqRnhw/edit?usp=sharing](https://drive.google.com/drive/folders/141v8i4cvNGrrzBccZesZNT_eU48w4BHv?usp=sharing))  
 
 - **Diagrama UML do projeto:**  
-  [Visualize no Google Drive](https://drive.google.com/file/d/1wX5p6B_cJklursa3Jh4o2clqm0vMm_Hz/view?usp=sharing)  
+  [Clique aqui para Diagrama UML do projeto]([https://drive.google.com/file/d/1wX5p6B_cJklursa3Jh4o2clqm0vMm_Hz/view?usp=sharing](https://drive.google.com/drive/folders/1sM3cB320fvlwXP4lYR8_cxHk7plEDnPT?usp=sharing))  
 
 - **Caso de uso:**  
-  [Visualize no Google Drive](https://drive.google.com/file/d/1egiMp8yv-c_JAHzoMbfY-Np2MV29TWfm/view?usp=sharing)  
+  [Clique aqui para Caso de uso]([https://drive.google.com/file/d/1egiMp8yv-c_JAHzoMbfY-Np2MV29TWfm/view?usp=sharing](https://drive.google.com/drive/folders/1zfTk6-IrFdoyXAVV9pJAegro8bxOK0Jq?usp=sharing))  
 
 ---
 
@@ -34,21 +34,19 @@ Antes de iniciar, certifique-se de ter o seguinte instalado:
 
 ## **Como executar a API**
 ### **Passo 1: Clone o repositório**
-Faça o download ou clone o repositório.
-
----
+Faça o download ou clone o repositório na sua máquina e abra no seu ambiente de programação.
 
 ### **Passo 2: Construa a imagem Docker**
-Dentro da pasta raiz do projeto, execute o seguinte comando para criar a imagem Docker:
+No terminal, dentro da pasta raiz do projeto, execute o seguinte comando para criar a imagem Docker:
 ```bash
 docker build -t api-gerenciamento-tarefas .
 ```
+
 ### **Passo 3: Execute o container**
-Inicie o container com o comando:
+Após o passo 2, inicie o container com o comando:
 ```bash
 docker run -p 5000:5000 -it api-gerenciamento-tarefas
 ```
-
 ---
 
 ## **Autenticação com JWT**
@@ -67,8 +65,6 @@ Resposta esperada:
     "access_token": "seu_token_aqui"
 }
 ```
-
----
 
 ## **Usar o token JWT:**
 Inclua o token no cabeçalho Authorization para acessar os endpoints protegidos.
