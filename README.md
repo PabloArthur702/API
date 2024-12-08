@@ -47,6 +47,9 @@ Após o passo 2, inicie o container com o comando:
 ```bash
 docker run -p 5000:5000 -it api-gerenciamento-tarefas
 ```
+
+Após a execução do container, os endpoints da API estarão disponíveis no servidor **http://localhost:5000/**, permitindo a realização de operações utilizando os métodos **GET**, **POST** e **DELETE**. Esses métodos podem ser utilizados para interagir com os recursos da API, como cadastrar, listar, atualizar e excluir tarefas. Certifique-se de incluir o token JWT no cabeçalho das requisições para acessar os endpoints protegidos.
+
 ---
 
 ## **Autenticação com JWT**
