@@ -52,7 +52,7 @@ Após a execução do container, os endpoints da API estarão disponíveis no se
 ## **Comandos de autenticação:**
 
 ### **1. Registro de Usuário**
-Abrindo o postman cole a URL fornecida e atribua no final o endpoint /register, selecione o método "POST". Mude para "Body", selecione "raw" e depois modifique "Text" para "JSON". Adicione dentro do campo a seguinte requisição:
+Abrindo o postman, cole a URL fornecida e atribua no final o endpoint /register, selecione o método "POST". Mude para "Body", selecione "raw" e depois modifique "Text" para "JSON". Adicione dentro do campo a seguinte requisição:
 ```bash
 {
     "name": "João",
