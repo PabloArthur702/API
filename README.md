@@ -4,7 +4,7 @@ Este é um projeto de gerenciamento de tarefas desenvolvido para máteria DCA360
 
 Autores:
 
-[Mauricio](github.com/mauricio)
+[Mauricio](https://github.com/MauricioMatheus)
 
 [Pablo Arthur](https://github.com/PabloArthur702)
 
