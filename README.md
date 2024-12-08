@@ -76,7 +76,7 @@ Requisição:
 ```
 Respostas:
 200: Retorna o token de acesso.
-401: Credenciais inválidas.   
+401: Credenciais inválidas.  
 Selecione e cole o token gerado. No postman mude para "Authorization". Em "Auth type" selecione "Bearer Token" e cole o token gerado.
 
 ---
