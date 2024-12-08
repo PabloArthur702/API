@@ -32,56 +32,51 @@ Este é um projeto de gerenciamento de tarefas desenvolvido para máteria DCA360
 
 ---
 
-## **Como executar a API**
+## **Execute a API usando os seguintes comandos em um terminal compatível:**
+
 ### **Passo 1: Clone o repositório**
-Clone o repositório na sua máquina e entre no diretório do repositório clonado, usando os seguintes comandos.
+Clone o repositório na sua máquina:
 ```bash
 git clone https://github.com/PabloArthur702/API_tasks.git
 ```
-
+### **Passo 2: Entre no diretório do repositório clonado.**
+Entre no diretório do repositório clonado:
 ```bash
 cd API_tasks
 ```
 
-### **Passo 2: Construa a imagem Docker**
-No terminal, dentro da pasta raiz do projeto, execute o seguinte comando para criar a imagem Docker:
+### **Passo 3: Construa a imagem Docker**
+Crie a imagem Docker:
 ```bash
 docker build -t api-gerenciamento-tarefas .
 ```
 
-### **Passo 3: Execute o container**
-Após o passo 2, inicie o container com o comando:
+### **Passo 4: Execute o container**
+Inicie o container:
 ```bash
 docker run -p 5000:5000 -it api-gerenciamento-tarefas
 ```
 
-### **Passo 4: Uso da API**
+### **Passo 5: Uso da API**
 
-Após a execução do container, os endpoints da API estarão disponíveis no servidor **http://localhost:5000/**, permitindo a realização de operações utilizando os métodos **GET**, **POST** e **DELETE**. Esses métodos podem ser utilizados para interagir com os recursos da API, como cadastrar, listar, atualizar e excluir tarefas. Certifique-se de incluir o token JWT no cabeçalho das requisições para acessar os endpoints protegidos.
+Após a execução do container, os endpoints da API estarão disponíveis no servidor **http://localhost:5000/**, permitindo a realização de operações utilizando os métodos para o CRUD. Esses métodos podem ser utilizados para interagir com os recursos da API, como cadastrar, listar, atualizar e excluir tarefas. Certifique-se de incluir o token JWT no cabeçalho das requisições para acessar os endpoints protegidos.
 
 ---
 
 ## **Autenticação com JWT**
 A API utiliza JWT para proteger os endpoints. Siga os passos abaixo para autenticação:
----
+
 ### **Obter um token JWT:**
 Faça uma requisição POST para o endpoint /login com as credenciais do usuário.
 Exemplo (com curl):
 
 ```bash
-curl -X POST http://localhost:5000/login \
--H "Content-Type: application/json" \
--d '{"username": "admin", "password": "123"}'
-Resposta esperada:
-{
-    "access_token": "seu_token_aqui"
-}
+comando aqui
 ```
 
 ## **Usar o token JWT:**
 Inclua o token no cabeçalho Authorization para acessar os endpoints protegidos.
 Exemplo:
 ```bash	
-curl -X GET http://localhost:5000/tasks \
--H "Authorization: Bearer seu_token_aqui"
+comando aqui
 ```
