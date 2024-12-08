@@ -34,9 +34,13 @@ Este é um projeto de gerenciamento de tarefas desenvolvido para máteria DCA360
 
 ## **Como executar a API**
 ### **Passo 1: Clone o repositório**
-Faça o download ou clone o repositório na sua máquina e abra no seu ambiente de programação.
+Faça o download ou clone o repositório na sua máquina e entre no diretório do repositório clonado.
 ```bash
 git clone https://github.com/PabloArthur702/API_tasks.git
+```
+
+```bash
+cd API_tasks
 ```
 
 ### **Passo 2: Construa a imagem Docker**
