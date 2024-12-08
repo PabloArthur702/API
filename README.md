@@ -34,5 +34,50 @@ Antes de iniciar, certifique-se de ter o seguinte instalado:
 
 ## **Como executar a API**
 ### **Passo 1: Clone o repositório**
-Faça o download ou clone o repositório:
+Faça o download ou clone o repositório.
+
+###Passo 2: Construa a imagem Docker
+Dentro da pasta raiz do projeto, execute o seguinte comando para criar a imagem Docker:
+```bash
+docker build -t api-gerenciamento-tarefas .
+```
+###Passo 3: Execute o container
+Inicie o container com o comando:
+```bash
+docker run -p 5000:5000 -it api-gerenciamento-tarefas
+```
+A API estará disponível em http://localhost:5000.
+
+##Autenticação com JWT
+A API utiliza JWT para proteger os endpoints. Siga os passos abaixo para autenticação:
+
+###Obter um token JWT:
+Faça uma requisição POST para o endpoint /login com as credenciais do usuário.
+Exemplo (com curl):
+
+```bash
+curl -X POST http://localhost:5000/login \
+-H "Content-Type: application/json" \
+-d '{"username": "admin", "password": "123"}'
+Resposta esperada:
+{
+    "access_token": "seu_token_aqui"
+}
+```
+##Usar o token JWT:
+Inclua o token no cabeçalho Authorization para acessar os endpoints protegidos.
+Exemplo:
+```bash	
+curl -X GET http://localhost:5000/tasks \
+-H "Authorization: Bearer seu_token_aqui"
+```
+###Comandos resumidos
+Construir a imagem Docker:
+```bash	
+docker build -t api-gerenciamento-tarefas .
+```
+Rodar o container:
+```bash	
+docker run -p 5000:5000 -it api-gerenciamento-tarefas
+```
 
