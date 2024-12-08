@@ -1,6 +1,9 @@
 # **Projeto de Gerenciamento de Tarefas**
 
-Este é um projeto de gerenciamento de tarefas desenvolvido para máteria DCA3603 - ENGENHARIA DE SOFTWARE - T01 (2024.2), desenvolvida em Python, utilizando o framework Flask. A API implementa autenticação com JWT e está containerizada com Docker para facilitar a implantação.  
+Este é um projeto de gerenciamento de tarefas desenvolvido para máteria DCA3603 - ENGENHARIA DE SOFTWARE - T01 (2024.2). Desenvolvida em Python, utilizando o framework Flask. A API implementa autenticação com JWT e está containerizada com Docker.
+
+Responsaveis:
+
 
 ---
 
