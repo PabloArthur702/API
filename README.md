@@ -35,6 +35,4 @@ Antes de iniciar, certifique-se de ter o seguinte instalado:
 ## **Como executar a API**
 ### **Passo 1: Clone o repositório**
 Faça o download ou clone o repositório:
-```bash
-git clone <url_do_repositorio>
-cd <nome_da_pasta>
+
