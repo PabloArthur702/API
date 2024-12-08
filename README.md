@@ -35,30 +35,25 @@ Este é um projeto de gerenciamento de tarefas desenvolvido para máteria DCA360
 ## **Execute a API usando os seguintes comandos em um terminal compatível:**
 
 ### **Passo 1: Clone o repositório**
-Clone o repositório na sua máquina:
 ```bash
 git clone https://github.com/PabloArthur702/API_tasks.git
 ```
-### **Passo 2: Entre no diretório do repositório clonado.**
-Entre no diretório do repositório clonado:
+### **Passo 2: Entre no diretório do repositório clonado**
 ```bash
 cd API_tasks
 ```
 
-### **Passo 3: Construa a imagem Docker**
-Crie a imagem Docker:
+### **Passo 3: Crie a imagem Docker**
 ```bash
 docker build -t api-gerenciamento-tarefas .
 ```
 
-### **Passo 4: Execute o container**
-Inicie o container:
+### **Passo 4: Inicie o container**
 ```bash
 docker run -p 5000:5000 -it api-gerenciamento-tarefas
 ```
 
 ### **Passo 5: Uso da API**
-
 Após a execução do container, os endpoints da API estarão disponíveis no servidor **http://localhost:5000/**, permitindo a realização de operações utilizando os métodos para o CRUD. Esses métodos podem ser utilizados para interagir com os recursos da API, como cadastrar, listar, atualizar e excluir tarefas. Certifique-se de incluir o token JWT no cabeçalho das requisições para acessar os endpoints protegidos.
 
 ---
