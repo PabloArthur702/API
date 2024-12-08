@@ -110,8 +110,8 @@ Respostas:
 Endpoint: /tasks/<id>
 Método: GET
 Autenticação: Requer JWT.
-Descrição: Retorna os detalhes de uma tarefa específica.
-O <id> das tarefas se parecem com "cd5d7d2a-bdb4-411f-8471-4e88d33a44f8"
+Descrição: Retorna os detalhes de uma tarefa específica.  
+O "id" das tarefas se parecem com "cd5d7d2a-bdb4-411f-8471-4e88d33a44f8".  
 Respostas:
 200: Detalhes da tarefa.
 404: Tarefa não encontrada.
