@@ -19,8 +19,7 @@ Este é um projeto de gerenciamento de tarefas desenvolvido para máteria DCA360
 ## **Pré-requisitos**
 Antes de iniciar, certifique-se de ter o seguinte instalado:
 - **Python 3.10+**  
-- **Docker**  
-- **Docker Compose** (opcional para futuras melhorias)
+- **Docker** 
 
 ---
 
