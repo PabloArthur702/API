@@ -52,7 +52,7 @@ Após a execução do container, os endpoints da API estarão disponíveis no se
 ## **Comandos de autenticação:**
 
 ### **1. Registro de Usuário**
-Abrindo o postman cole a URL fornecida e atribua no final a rota desejada, como por exemplo, "/register", selecione o método "POST". Mude para "Body", selecione "raw" e depois modifique "Text" para "JSON". Adicione dentro do campo a seguinte requisição:
+Abrindo o postman cole a URL fornecida e atribua no final o endpoint /register, selecione o método "POST". Mude para "Body", selecione "raw" e depois modifique "Text" para "JSON". Adicione dentro do campo a seguinte requisição:
 ```bash
 {
     "name": "João",
@@ -76,8 +76,8 @@ Requisição:
 ```
 Respostas:
 200: Retorna o token de acesso.
-401: Credenciais inválidas.
-Tarefas
+401: Credenciais inválidas. 
+Selecione e cole o token gerado. No postman mude para "Authorization". Em "Auth type" selecione "Bearer Token" e cole o token gerado.
 
 ---
 
@@ -111,6 +111,7 @@ Endpoint: /tasks/<id>
 Método: GET
 Autenticação: Requer JWT.
 Descrição: Retorna os detalhes de uma tarefa específica.
+O <id> das tarefas se parecem com "cd5d7d2a-bdb4-411f-8471-4e88d33a44f8"
 Respostas:
 200: Detalhes da tarefa.
 404: Tarefa não encontrada.
