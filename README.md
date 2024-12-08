@@ -83,7 +83,7 @@ Tarefas
 
 ---
 
-## **comandos de implantação:**
+## **Comandos de implantação:**
 
 ### **1. Adicionar Tarefa**
 Endpoint: /tasks
