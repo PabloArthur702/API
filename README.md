@@ -12,7 +12,6 @@ Este é um projeto de gerenciamento de tarefas desenvolvido para máteria DCA360
 
 ---
 
-## **Links importantes**
 - **Histórias de usuário:**  
   [Clique aqui para Histórias de usuário](https://drive.google.com/drive/folders/141v8i4cvNGrrzBccZesZNT_eU48w4BHv?usp=sharing)  
 
