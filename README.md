@@ -61,8 +61,11 @@ Abrindo o postman, cole a URL fornecida e atribua no final o endpoint /register,
 ```
 Depois clique em "Send".  
 Respostas:
+
 201: Usuário cadastrado com sucesso.
+
 400: Usuário já existe.
+
 ### **2. Login**
 Endpoint: /login
 Método: POST
@@ -75,8 +78,11 @@ Requisição:
 }
 ```
 Respostas:
+
 200: Retorna o token de acesso.
+
 401: Credenciais inválidas.  
+
 Selecione e cole o token gerado. No postman mude para "Authorization". Em "Auth type" selecione "Bearer Token" e cole o token gerado.
 
 ---
@@ -97,15 +103,20 @@ Requisição:
 }
 ```
 Respostas:
+
 201: Tarefa adicionada com sucesso.
+
 401: Token inválido ou ausente.
+
 ### **2. Consultar Todas as Tarefas**
 Endpoint: /tasks
 Método: GET
 Autenticação: Requer JWT.
 Descrição: Retorna todas as tarefas do usuário autenticado.  
 Respostas:
+
 200: Lista de tarefas do usuário.
+
 ### **3. Consultar Tarefa por ID**
 Endpoint: /tasks/<id>
 Método: GET
@@ -113,8 +124,11 @@ Autenticação: Requer JWT.
 Descrição: Retorna os detalhes de uma tarefa específica.  
 O "id" das tarefas se parecem com "cd5d7d2a-bdb4-411f-8471-4e88d33a44f8".  
 Respostas:
+
 200: Detalhes da tarefa.
+
 404: Tarefa não encontrada.
+
 ### **4. Editar Tarefa**
 Endpoint: /tasks/<id>
 Método: PUT
@@ -129,21 +143,29 @@ Requisição:
 }
 ```
 Respostas:
+
 200: Tarefa atualizada com sucesso.
+
 404: Tarefa não encontrada.
+
 ### **5. Marcar Tarefa como Concluída**
 Endpoint: /tasks/<id>/done
 Método: PUT
 Autenticação: Requer JWT.
 Descrição: Marca uma tarefa como concluída.
 Respostas:
+
 200: Tarefa marcada como feita.
+
 404: Tarefa não encontrada.
+
 ### **6. Excluir Tarefa**
 Endpoint: /tasks/<id>
 Método: DELETE
 Autenticação: Requer JWT.
 Descrição: Exclui uma tarefa específica.
 Respostas:
+
 200: Tarefa deletada com sucesso.
+
 404: Tarefa não encontrada.
